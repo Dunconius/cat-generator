@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import CatCard from "./CatCard.jsx";
 import fetchCatImage from "../functions/imageSearchFunction.jsx"
+import "./CatList.css"
 
 
 
@@ -25,10 +26,13 @@ export default function CatList() {
   
     return (
       <section>
+        <h1>Cat Generator</h1>
         <button onClick={handleFetchCatImages}>Get Cats!</button>
-        {catList.map((cat, index) => (
-          <CatCard key={index} catName={cat} catImage={catImages[index]} />
-        ))}
+        <div className="catList">
+          {catList.map((cat, index) => (
+            <CatCard key={index} catName={cat} catImage={catImages[index]} />
+          ))}
+        </div>
       </section>
     );
   }
