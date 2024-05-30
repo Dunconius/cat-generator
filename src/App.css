@@ -1,0 +1,30 @@
+body, html, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.main {
+  flex: 1; /* This makes the main content area expand to fill the available space */
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.footer {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
