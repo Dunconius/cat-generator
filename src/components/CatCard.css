@@ -1,0 +1,9 @@
+.catCard {
+    background-color: aqua;
+    margin: 20px;
+}
+
+.catImage {
+    background-color: rgb(255, 21, 0);
+    width: 500px;
+}
