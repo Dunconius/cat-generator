@@ -1,0 +1,23 @@
+/* FiveStars.css */
+.starContainer {
+    display: flex;
+}
+
+.star {
+    cursor: pointer;
+    margin: 0 5px; /* Adjust spacing between stars as needed */
+    transition: transform 0.2s; /* Add a hover effect */
+    font-size: 50px; /* Set the size of the star icon */
+}
+
+.star:hover {
+    transform: scale(1.2); /* Slightly enlarge the star on hover */
+}
+
+.star.empty {
+    color: black; /* Color for the empty star */
+}
+
+.star.filled {
+    color: gold; /* Color for the filled star */
+}
