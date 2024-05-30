@@ -1,6 +1,15 @@
 .catCard {
-    background-color: aqua;
+    background-color: rgb(207, 207, 207);
     margin: 20px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.catImageContainer{
+    max-height: 400px;
+    border-radius: 25px;
+    vertical-align: middle;
+    overflow: hidden;
 }
 
 .catImage {

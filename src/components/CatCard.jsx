@@ -1,12 +1,21 @@
 // CatCard.jsx
 import React from "react";
 import "./CatCard.css";
+import Like from "./like";
+import { useState } from "react";
 
 const CatCard = ({ catName, catImage }) => {
+  const [likeCount, setLikeCount] = useState(0);
+
+  const handleLike = () => {
+    setLikeCount(likeCount + 1);
+  };
+  
   return (
     <div className="catCard">
       <h1>{catName}</h1>
-      <div>
+      <Like onClick={handleLike}/>
+      <div className="catImageContainer">
         {catImage && <img src={catImage} alt={catName} className="catImage" />}
       </div>
     </div>
