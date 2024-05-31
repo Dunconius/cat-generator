@@ -29,6 +29,9 @@
     vertical-align: middle;
     align-items: center;
     overflow: hidden;
+    background-size: cover; /* Ensures the background image covers the entire container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
 }
 
 .catImage {

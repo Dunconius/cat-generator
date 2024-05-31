@@ -2,6 +2,7 @@
 import React from "react";
 import "./CatCard.css";
 import Like from "./like";
+import catLoading from "../assets/catLoading.jpg"
 
 const CatCard = ({ catName, catImage, likeStatus, onToggleLike, loading }) => {
   return (
@@ -10,7 +11,10 @@ const CatCard = ({ catName, catImage, likeStatus, onToggleLike, loading }) => {
         <Like likeStatus={likeStatus} onToggleLike={onToggleLike} />
         <h1>{catName}</h1>
       </div>
-      <div className="catImageContainer">
+      <div 
+        className="catImageContainer"
+        style={{ backgroundImage: loading || catImage === 'placeholder' ? `url(${catLoading})` : 'none' }}
+      >
         {loading || catImage === 'placeholder' ? (
           <div className="placeholderImage">Cats Loading...</div> // Placeholder content
         ) : (
