@@ -12,16 +12,14 @@ function Star({ filled, onClick }) {
     );
 }
 
-export default function FiveStars() {
-    const [rating, setRating] = useState(0);
-
+export default function FiveStars({ rating, onRatingChange }) {
     return (
         <div className="starContainer">
             {Array.from({ length: 5 }, (_, index) => (
                 <Star 
                     key={index}
                     filled={index < rating}
-                    onClick={() => setRating(index + 1)} />
+                    onClick={() => onRatingChange(index + 1)} />
             ))}
         </div>
     );
