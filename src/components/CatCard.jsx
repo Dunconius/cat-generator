@@ -3,7 +3,7 @@ import React from "react";
 import "./CatCard.css";
 import Like from "./like";
 
-const CatCard = ({ catName, catImage, likeStatus, onToggleLike }) => {
+const CatCard = ({ catName, catImage, likeStatus, onToggleLike, loading }) => {
   return (
     <div className="catCard">
       <div className="catHeader">
@@ -11,7 +11,11 @@ const CatCard = ({ catName, catImage, likeStatus, onToggleLike }) => {
         <h1>{catName}</h1>
       </div>
       <div className="catImageContainer">
-        {catImage && <img src={catImage} alt={catName} className="catImage" />}
+        {loading || catImage === 'placeholder' ? (
+          <div className="placeholderImage">Cats Loading...</div> // Placeholder content
+        ) : (
+          <img src={catImage} alt={catName} className="catImage" />
+        )}
       </div>
     </div>
   );

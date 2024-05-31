@@ -18,7 +18,7 @@ function App() {
       {/* <FiveStars /> */}
       {/* <SortableInputList /> */}
       {/* <ImageTest /> */}
-
+      <div className="footer"></div>
     </div>
   );
 }

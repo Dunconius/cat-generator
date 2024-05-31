@@ -12,7 +12,13 @@
 .catHeader {
     /* background-color: rgb(169, 58, 58); */
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.catHeader > h1 {
+    font-size: 30px;
+    
 }
 
 .catImageContainer{
@@ -47,4 +53,17 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+.placeholderImage {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-family: "Ubuntu Sans Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 100px;
 }

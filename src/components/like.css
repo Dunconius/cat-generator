@@ -1,0 +1,10 @@
+
+.likeButton {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; /* Removes tap highlight color on iOS and Android */
+    outline: none; /* Removes the outline on focus */
+}
+
+.likeButton:active {
+    outline: none; /* Ensures no outline on active state */
+}
