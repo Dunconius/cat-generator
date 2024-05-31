@@ -11,24 +11,35 @@ import CatGeneratorHeader from "./CatGeneratorHeader.jsx";
 export default function CatList() {
     const [catImages, setCatImages] = useState([]);
     const [randomCatNames, setRandomCatNames] = useState([]);
-    // const [loading, setLoading] = useState(false);
+    const [likeStatuses, setLikeStatuses] = useState([]); // Manage like statuses
   
     const handleFetchCatImages = async () => {
-      // setLoading(true); // Set loading to true while waiting for API response
       const images = await Promise.all(Array.from({ length: 6 }, () => fetchCatImage()));
       const shuffledCatNames = shuffleArray(catList).slice(0, 6);
       
       setCatImages(images);
       setRandomCatNames(shuffledCatNames.slice(0, images.length));
-      // setLoading(false); // Set loading to false once data is loaded
+      setLikeStatuses(Array(images.length).fill(false)); // Reset likes
+    };
+
+    const handleToggleLike = (index) => {
+      const newLikeStatuses = [...likeStatuses];
+      newLikeStatuses[index] = !newLikeStatuses[index];
+      setLikeStatuses(newLikeStatuses);
     };
   
     return (
       <section className="catListSection">
-        <CatGeneratorHeader onFetchCats={handleFetchCatImages} /> {/* Use the new component */}
+        <CatGeneratorHeader onFetchCats={handleFetchCatImages} />
         <div className="catList">
           {catImages.map((image, index) => (
-            <CatCard key={index} catName={randomCatNames[index]} catImage={image} />
+            <CatCard 
+            key={index} 
+            catName={randomCatNames[index]} 
+            catImage={image} 
+            likeStatus={likeStatuses[index]}
+            onToggleLike={() => handleToggleLike(index)}
+            />
           ))}
         </div>
       </section>

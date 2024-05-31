@@ -17,7 +17,7 @@ Replace your *doom* scrolling with delightfull *Main Coon* scrolling!
     - [x] like button
 
 ## Todo:
-- [ ] Like button reset on 'get more cats'
+- [x] Like button reset on 'get more cats'
 - [ ] ranking system
 
 ## Styling todo:
