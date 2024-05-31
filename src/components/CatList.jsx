@@ -24,7 +24,7 @@ export default function CatList() {
     };
   
     return (
-      <section>
+      <section className="catListSection">
         <CatGeneratorHeader onFetchCats={handleFetchCatImages} /> {/* Use the new component */}
         <div className="catList">
           {catImages.map((image, index) => (
