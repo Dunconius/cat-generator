@@ -13,8 +13,10 @@ const CatCard = ({ catName, catImage }) => {
   
   return (
     <div className="catCard">
-      <h1>{catName}</h1>
-      <Like onClick={handleLike}/>
+      <div className="catHeader">
+        <Like onClick={handleLike}/>
+        <h1>{catName}</h1>
+      </div>
       <div className="catImageContainer">
         {catImage && <img src={catImage} alt={catName} className="catImage" />}
       </div>

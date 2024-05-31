@@ -11,7 +11,7 @@ const Like = ({ onClick }) => {
 
   return (
     <div onClick={toggle} style={{ cursor: 'pointer' }}>
-      {likeStatus ? <AiFillHeart color="#ff6b81" size={100} /> : <AiOutlineHeart color="#000000" size={100} />}
+      {likeStatus ? <AiFillHeart color="#ff6b81" size={60} /> : <AiOutlineHeart color="#000000" size={60} />}
     </div>
   );
 }
