@@ -11,16 +11,16 @@ import CatGeneratorHeader from "./CatGeneratorHeader.jsx";
 export default function CatList() {
     const [catImages, setCatImages] = useState([]);
     const [randomCatNames, setRandomCatNames] = useState([]);
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
   
     const handleFetchCatImages = async () => {
-      setLoading(true); // Set loading to true while waiting for API response
+      // setLoading(true); // Set loading to true while waiting for API response
       const images = await Promise.all(Array.from({ length: 6 }, () => fetchCatImage()));
       const shuffledCatNames = shuffleArray(catList).slice(0, 6);
       
       setCatImages(images);
       setRandomCatNames(shuffledCatNames.slice(0, images.length));
-      setLoading(false); // Set loading to false once data is loaded
+      // setLoading(false); // Set loading to false once data is loaded
     };
   
     return (

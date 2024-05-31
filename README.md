@@ -25,13 +25,13 @@ Replace your *doom* scrolling with delightfull *Main Coon* scrolling!
     - [ ] flex for vertical scrolling
     - [ ] card / image size flex for different screen sizes
 - [ ] media queries for monitor and mobile
-- [ ] Header
-    - [ ] centered
-    - [ ] add logo
+- [x] Header
+    - [x] centered
+    - [x] add logo
     - [ ] cat-themed font??
-- [ ] Button
-    - [ ] Style to actually look good
-    - centered
+- [x] Button
+    - [x] Style to actually look good
+    - [x] centered
 
 
 ## Stretch Goals
