@@ -5,7 +5,8 @@
     margin: 20px;
     padding: 10px;
     border-radius: 25px;
-    width: 90%;
+    width: 80vw;
+    max-width: 600px;
 }
 
 .catHeader {
