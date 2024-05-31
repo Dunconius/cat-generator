@@ -5,6 +5,7 @@ import CatList from "./components/CatList";
 // import Board from "./test/TicTacToe";
 // import FiveStars from "./test/FiveStars";
 // import SortableInputList from './test/SortableInputList';
+// import ImageTest from "./test/imageTest";
 
 
 
@@ -16,6 +17,8 @@ function App() {
       {/* <Board /> */}
       {/* <FiveStars /> */}
       {/* <SortableInputList /> */}
+      {/* <ImageTest /> */}
+
     </div>
   );
 }

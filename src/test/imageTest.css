@@ -1,0 +1,9 @@
+.imageTest {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+
+.imageTest > image {
+    height: 50px;
+}

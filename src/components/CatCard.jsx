@@ -1,24 +1,39 @@
 // CatCard.jsx
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./CatCard.css";
 import Like from "./like";
-import { useState } from "react";
 
 const CatCard = ({ catName, catImage }) => {
   const [likeCount, setLikeCount] = useState(0);
+  const [loading, setLoading] = useState(true); // Add loading state
 
   const handleLike = () => {
     setLikeCount(likeCount + 1);
   };
-  
+
+  useEffect(() => {
+    setLoading(true); // Set loading to true whenever catImage changes
+  }, [catImage]);
+
+  const handleImageLoad = () => {
+    setLoading(false); // Set loading to false when image is loaded
+  };
+
   return (
     <div className="catCard">
       <div className="catHeader">
-        <Like onClick={handleLike}/>
+        <Like onClick={handleLike} />
         <h1>{catName}</h1>
       </div>
       <div className="catImageContainer">
-        {catImage && <img src={catImage} alt={catName} className="catImage" />}
+        {loading && <div className="spinner"></div>} {/* Show spinner while loading */}
+        <img
+          src={catImage}
+          alt={catName}
+          className="catImage"
+          onLoad={handleImageLoad}
+          style={{ display: loading ? "none" : "block" }} // Hide image while loading
+        />
       </div>
     </div>
   );
