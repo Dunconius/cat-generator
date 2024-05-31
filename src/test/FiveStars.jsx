@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { FaRegStar, FaStar } from "react-icons/fa";
 import './FiveStars.css'; // Import the CSS file
 

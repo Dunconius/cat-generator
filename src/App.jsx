@@ -4,7 +4,7 @@ import CatList from "./components/CatList";
 // import CatImage from "./functions/catApiRandom";
 // import Board from "./test/TicTacToe";
 // import FiveStars from "./test/FiveStars";
-import SortableInputList from './test/SortableInputList';
+// import SortableInputList from './test/SortableInputList';
 
 
 
